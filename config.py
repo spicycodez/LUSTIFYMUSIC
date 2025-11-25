@@ -27,7 +27,7 @@ SONG_DOWNLOAD_DURATION = int(
 
 LOGGER_ID = int(getenv("LOGGER_ID", ""))
 
-OWNER_ID = int(getenv("OWNER_ID", "7905552682"))
+OWNER_ID = int(getenv("OWNER_ID", "7603581459"))
 
 BOT_USERNAME = getenv("BOT_USERNAME" , "LustifyMusicBot")
 
