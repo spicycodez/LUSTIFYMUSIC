@@ -1,58 +1,82 @@
-
 <h2 align="center">
-  
-     ──「 ᴧᴧʀᴜᴍɪ ꭙ ᴍᴜꜱɪᴄ 」──
+ 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+IROMUSIC+V2)](https://github.com/IR-O/IROMUSIC)
 </h2>
 
-<p align="center"><a href="https://t.me/Swagger_Soul"><img src="https://files.catbox.moe/2rxu04.jpg"></a></p>
+<h2 align="center">
+    ──「 𝐍ɪsʜᴀ 𝚡 𝐌ᴜsɪᴄ 」──
+</h2>
 
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>  
- <p align="center">
-    ᴧ ᴛᴇʟᴇɢʀᴧᴍ ʙᴏᴛ ᴛᴏ ᴘʟᴧʏ ᴍᴜsɪᴄ ɪɴ ᴧ ᴠɪᴅᴇᴏ ᴄʜᴧᴛs.
-    <br />
-   </strong></a>
-  </p>
-
-
-<hr>
-
-## 🍁 ᴧʙoᴜᴛ ᴛʜɪs ʙᴏᴛ :
-
-![streamingfilestreambot-professional-live_1](https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png)
-
-</p>
-<p align='center'>
-    ᴛʜɪs ʀᴇᴘᴏ ᴡɪʟʟ ᴜsᴇ ᴛᴏ ᴅᴇᴘʟᴏʏ ғᴏʀ ʏᴏᴜʀ ᴘʟᴧʏɪɴɢ ʙᴏᴛ ᴏғ ᴛᴇʟᴇɢʀᴧᴍ
+<p align="center">
+  <img src="https://telegra.ph/file/04237b82008edbee8e213.jpg">
 </p>
 
+<p align="center">
+<a href="https://github.com/IR-O/IROMUSIC/stargazers"><img src="https://img.shields.io/github/stars/IR-O/IROMUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/IR-O/IROMUSIC/network/members"> <img src="https://img.shields.io/github/forks/IR-O/IROMUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/IR-O/IROMUSIC/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
+<a href="https://github.com/IR-O/IROMUSIC/commits/IR-O"> <img src="https://img.shields.io/github/last-commit/IR-O/IROMUSIC?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+</p>
 
-## ♢ ʜᴏᴡ ᴛᴏ ᴍᴧᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ʙᴏᴛ :
+<p align="center">
+  <img src="https://files.catbox.moe/y5ltcg.mp4">
+</p>
 
+<h3 align="center">
+    ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
+</h3>
 
-#### ♢ ᴄʟɪᴄᴋ ᴏɴ ᴛʜɪs ᴅʀᴏᴘ-ᴅᴏᴡɴ ᴧɴᴅ ɢᴇᴛ ᴍᴏʀᴇ ᴅᴇᴛᴧɪʟs
-<br>
-<details>
-  <summary><b>ᴅᴇᴘʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ:</b></summary>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/BUG-MUSIX/NishaMusic"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
+<h3 align="center">
+    ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʟᴏᴄᴀʟ ʜᴏsᴛ/ ᴠᴘs 」─
+</h3>
 
-1. ғᴏʀᴋ ᴛʜɪs ʀᴇᴘᴏ
-2. ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴧɴᴅ ғᴏʟʟᴏᴡ sᴛᴇᴘs
+- Get your [Necessary Variables](https://github.com/BUG-MUSIX/NishaMusic/blob/main/sample.env)
+- Upgrade and Update by :
+`sudo apt-get update && sudo apt-get upgrade -y`
+- Install Ffmpeg by :
+`sudo apt-get install python3-pip ffmpeg -y`
+- Install required packages by :
+`sudo apt-get install python3-pip -y`
+- Install pip by :
+`sudo pip3 install -U pip`
+- Install Node js by :
+`curl -fssL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm`
+- Clone the repository by :
+`git clone https://github.com/BUG-MUSIX/NishaMusic && cd STRANGER-MUSIC`
+- Install requirements by :
+`pip3 install -U -r requirements.txt`
+- Fill your variables in the env by :
+`vi sample.env`<br>
+Press `I` on the keyboard for editing env<br>
+Press `Ctrl+C` when you're done with editing env and `:wq` to save the env<br>
+- Rename the env file by :
+`mv sample.env .env`
+- Install tmux to keep running your bot when you close the terminal by :
+`sudo apt install tmux && tmux`
+- Finally run the bot by :
+`bash start`
+- For getting out from tmux session : Press `Ctrl+b` and then `d`<br>
+━━━━━━━━━━━━━━━━━━━━
 
-<h4> sᴏ ғᴏʟʟᴏᴇ ᴧʙᴏᴠᴇ sᴛᴇᴘs👆ᴧɴᴅ  ᴛʜᴇɴ ᴅᴇᴘʟᴏʏ ᴏᴛʜᴇʀ ᴡɪsᴇ ʙᴏᴛ ᴅᴏɴ'ᴛ ᴡᴏʀᴋ</h4>
+<h3 align="center">
+    ─「 sᴜᴩᴩᴏʀᴛ 」─
+</h3>
 
-ᴘʀᴇss ᴛʜᴇ ʙᴇʟʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ғᴧsᴛ ᴅᴇᴘʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ/ʀᴧɪʟᴡᴀʏ
-ᴇɪᴛʜᴇʀ ʏᴏᴜ ᴄᴏᴜʟᴅ ʟᴏᴄᴧʟʟʏ ʜᴏsᴛ ᴏʀ ᴅᴇᴘʟᴏʏ ᴏɴ [ʜᴇʀᴏᴋᴜ](https://heroku.com)
-### 💜 ʜᴇʀᴏᴋᴜ
+<p align="center">
+<a href="https://t.me/SpicyxBots"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+</p>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/itsLustify/LustifyMusic"> <img src="https://www.herokucdn.com/deploy/button.svg"></a></p>
+<p align="center">
+<a href="https://t.me/SpicyxNetwork"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+</p>
 
-<br>
+<p align="center">
+<a href="https://t.me/NoMoreMaxim"><img src="https://img.shields.io/badge/-Maxim-blue.svg?style=for-the-badge&logo=Telegram"></a>
+</p>
 
-
-then goto the <a href="#mandatory-vars">variables tab</a> for more info on setting up environmental variables. </details>
-
-<details>
-  <summary><b>ғᴇᴧᴛᴜʀᴇs:</b></summary>
   
 <p>
 
@@ -168,6 +192,6 @@ Bot also Supported with Channels. Just add bot and assistant to the Channel as A
 
 ### Credits : 
 
-- [ᴧᴧʀᴜᴍɪ](https://github.com/itsLustify)
-- [ᴛᴇʟᴇɢʀᴧᴍ](https://t.me/Swagger_Soul)
+- [ᴧᴧʀᴜᴍɪ](https://github.com/spicycodez)
+- [ᴛᴇʟᴇɢʀᴧᴍ](https://t.me/SheOwnsMaxim)
 - Everyone In This Journey !
