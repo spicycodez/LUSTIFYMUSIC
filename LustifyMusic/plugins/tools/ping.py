@@ -12,12 +12,8 @@ from LustifyMusic.utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
 
 PING_IMAGES = [
-    "https://files.catbox.moe/fh7vw7.jpg",
-    "https://files.catbox.moe/lckxh6.jpg",
-    "https://files.catbox.moe/smteo6.jpg",
-    "https://files.catbox.moe/7enu2i.jpg",
-    "https://files.catbox.moe/n6hkvd.jpg",
-    "https://files.catbox.moe/ej1p7t.jpg",
+    "https://files.catbox.moe/taeu8f.jpg",
+    "https://files.catbox.moe/taeu8f.jpg",
 ]
 
 
