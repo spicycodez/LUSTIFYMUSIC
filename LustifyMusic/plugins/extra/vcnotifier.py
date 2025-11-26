@@ -1,5 +1,5 @@
-from pyrogram import Client, filters
-from pyrogram.types import Message, ChatMemberUpdated
+/eval from pyrogram import Client, filters
+from pyrogram.types import Message
 import logging
 from LustifyMusic import app
 
@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 async def video_chat_started(client, message: Message):
     chat = message.chat
     await message.reply(
-        f"<b>🎥 ᴠᴏɪᴄᴇ ᴄʜᴧᴛ sᴛᴧʀᴛ ʜᴏ ɢʏᴧ ʜᴧ {chat.title} ᴍᴇᴍ~ 💕</b>\n\n"
+        f"<b>🎥 ᴠᴏɪᴄᴇ ᴄʜᴧᴛ sᴛᴧʀᴛ ʜᴏ ɢʏᴧ ʜᴧ {chat.title} 💕</b>\n\n"
         f"<b>ʙᴧʙʏʏʏ ᴊᴏɪɴ ᴋᴀʀ ʟᴏ ɴᴀ... ᴍᴀɴᴅ ʙʜᴧʟᴧ ᴅᴏᴏɴɢɪ 😉</b>"
     )
 
@@ -19,7 +19,7 @@ async def video_chat_started(client, message: Message):
 async def video_chat_ended(client, message: Message):
     chat = message.chat
     await message.reply(
-        f"<b>🚫 ᴠᴏɪᴄᴇ ᴄʜᴧᴛ ᴋʜᴧᴛᴧᴍ ʜᴏ ɢʏᴧ {chat.title} ᴍᴇᴍ…</b>\n\n"
+        f"<b>🚫 ᴠᴏɪᴄᴇ ᴄʜᴧᴛ ᴋʜᴧᴛᴧᴍ ʜᴏ ɢʏᴧ {chat.title} </b>\n\n"
         f"<b>ᴛʜᴧɴᴋ ʏᴏᴜ ꜰᴏʀ ᴊᴏɪɴɪɴɢ ʙᴧʙʏʏʏ... ᴍɪss ᴋᴀʀᴜɴɢɪ 😘👋</b>"
     )
 
@@ -37,35 +37,3 @@ async def vc_invited(client, message: Message):
         text += f"• {user.mention}\n"
 
     await message.reply(text)
-
-# ----------------------- USER JOIN / LEAVE VC -----------------------
-@app.on_chat_member_updated()
-async def member_update(client, update: ChatMemberUpdated):
-    chat = update.chat
-    old = update.old_chat_member
-    new = update.new_chat_member
-
-    # ----- USER JOINS VC -----
-    try:
-        if not old.is_speaking and new.is_speaking:
-            if not new.user.is_bot:
-                msg = await app.send_message(
-                    chat.id,
-                    f"💗 <b>{new.user.mention}</b> ʙᴧʙʏʏʏ ᴠᴄ ᴍᴇ ᴧ ɢʏᴧᴀᴀ… "
-                    f"ᴍᴜᴊʜᴇ ʙʜɪ ʙᴜʟᴧ ʟᴏᴏ ɴᴀ 😉💞"
-                )
-                await msg.delete(delay=300)  # auto delete after 5 minutes
-    except:
-        pass
-
-    # ----- USER LEAVES VC -----
-    try:
-        if old.is_speaking and not new.is_speaking:
-            msg = await app.send_message(
-                chat.id,
-                f"💔 <b>{new.user.mention}</b> ᴠᴄ sᴇ ᴄʜᴧʟᴧ ɢʏᴧ ʙᴧʙʏ… "
-                f"ᴍɪss ᴋᴀʀᴜɴɢɪ 😢"
-            )
-            await msg.delete(delay=300)  # auto delete after 5 minutes
-    except:
-        pass
