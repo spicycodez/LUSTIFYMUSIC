@@ -13,7 +13,7 @@ from config import BANNED_USERS, PING_IMG_URL
 
 PING_IMAGES = [
     "https://files.catbox.moe/taeu8f.jpg",
-    "https://files.catbox.moe/taeu8f.jpg",
+    "https://files.catbox.moe/taeu8f.jpg"
 ]
 
 
