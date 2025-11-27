@@ -171,7 +171,7 @@ async def welcome(client, message: Message):
 
                 out = start_panel(_)
                 await message.reply_photo(
-                    random.choice(SHASHANK_PH),
+                    random.choice(LUSTIFY_PIC),
                     has_spoiler=True,
                     caption=_["start_3"].format(
                         message.from_user.mention,
