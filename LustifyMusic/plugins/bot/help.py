@@ -12,18 +12,18 @@ from strings import get_string, helpers
 
 # Images list (cleaned spaces)
 LUSTIFY_PIC = [
-    "https://files.catbox.moe/aov76u.jpg",
-    "https://files.catbox.moe/jwlita.jpg",
-    "https://files.catbox.moe/75au5f.jpg",
-    "https://files.catbox.moe/fh7vw7.jpg",
-    "https://files.catbox.moe/8q4t6u.jpg",
-    "https://files.catbox.moe/aov76u.jpg",
-    "https://files.catbox.moe/jwlita.jpg",
-    "https://files.catbox.moe/75au5f.jpg",
-    "https://files.catbox.moe/fh7vw7.jpg",
-    "https://files.catbox.moe/8q4t6u.jpg",
-    "https://files.catbox.moe/aov76u.jpg",
-    "https://files.catbox.moe/jwlita.jpg"
+    "https://files.catbox.moe/7kbojt.jpg",
+    "https://files.catbox.moe/y8xei6.jpg",
+    "https://files.catbox.moe/taeu8f.jpg",
+    "https://files.catbox.moe/p3rdn3.jpg",
+    "https://files.catbox.moe/30qlzm.jpg",
+    "https://files.catbox.moe/6ed6rh.jpg",
+    "https://files.catbox.moe/i5o42l.jpg",
+    "https://files.catbox.moe/2b9dlp.jpg",
+    "https://files.catbox.moe/5hb0yi.jpg",
+    "https://files.catbox.moe/9i4zek.jpg",
+    "https://files.catbox.moe/p5k77y.jpg",
+    "https://files.catbox.moe/zlds64.jpg"
 ]
 
 # -------------------- Private Help Command --------------------
