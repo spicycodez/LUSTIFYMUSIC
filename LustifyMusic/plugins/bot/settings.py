@@ -32,12 +32,18 @@ from config import BANNED_USERS, OWNER_ID
 
 # ✅ Unique images
 LUSTIFY_PIC = [
-    "https://files.catbox.moe/fh7vw7.jpg",
-    "https://files.catbox.moe/lckxh6.jpg",
-    "https://files.catbox.moe/smteo6.jpg",
-    "https://files.catbox.moe/7enu2i.jpg",
-    "https://files.catbox.moe/n6hkvd.jpg",
-    "https://files.catbox.moe/ej1p7t.jpg",
+    https://files.catbox.moe/7kbojt.jpg",
+    "https://files.catbox.moe/y8xei6.jpg",
+    "https://files.catbox.moe/taeu8f.jpg",
+    "https://files.catbox.moe/p3rdn3.jpg",
+    "https://files.catbox.moe/30qlzm.jpg",
+    "https://files.catbox.moe/6ed6rh.jpg",
+    "https://files.catbox.moe/i5o42l.jpg",
+    "https://files.catbox.moe/2b9dlp.jpg",
+    "https://files.catbox.moe/5hb0yi.jpg",
+    "https://files.catbox.moe/9i4zek.jpg",
+    "https://files.catbox.moe/p5k77y.jpg",
+    "https://files.catbox.moe/zlds64.jpg
 ]
 
 
