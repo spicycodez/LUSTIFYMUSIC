@@ -1,10 +1,10 @@
 <h2 align="center">
  
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+IROMUSIC+V2)](https://github.com/IR-O/IROMUSIC)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=WELCOME+TO+LUSTIFY-MUSIC+V2)](https://github.com/spicycodez/LUSTIFYMUSIC)
 </h2>
 
 <h2 align="center">
-    ──「 𝐍ɪsʜᴀ 𝚡 𝐌ᴜsɪᴄ 」──
+    ── ˹ ʟᴜsᴛɪғʏ ♪ ᴍᴜsɪᴄ ˼ ──
 </h2>
 
 <p align="center">
@@ -12,11 +12,11 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/IR-O/IROMUSIC/stargazers"><img src="https://img.shields.io/github/stars/IR-O/IROMUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/IR-O/IROMUSIC/network/members"> <img src="https://img.shields.io/github/forks/IR-O/IROMUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/IR-O/IROMUSIC/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
-<a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
-<a href="https://github.com/IR-O/IROMUSIC/commits/IR-O"> <img src="https://img.shields.io/github/last-commit/IR-O/IROMUSIC?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+<a href="https://github.com/spicycodez/LUSTIFYMUSIC/stargazers"><img src="https://img.shields.io/github/stars/spicycodez/LUSTIFYMUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/spicycodez/LUSTIFYMUSIC/network/members"><img src="https://img.shields.io/github/forks/spicycodez/LUSTIFYMUSIC?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/spicycodez/LUSTIFYMUSIC/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /></a>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /></a>
+<a href="https://github.com/spicycodez/LUSTIFYMUSIC/commits"><img src="https://img.shields.io/github/last-commit/spicycodez/LUSTIFYMUSIC?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
 </p>
 
 <p align="center">
@@ -27,13 +27,13 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/BUG-MUSIX/NishaMusic"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/spicycodez/LUSTIFYMUSIC"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʟᴏᴄᴀʟ ʜᴏsᴛ/ ᴠᴘs 」─
 </h3>
 
-- Get your [Necessary Variables](https://github.com/BUG-MUSIX/NishaMusic/blob/main/sample.env)
+- Get your [Necessary Variables](https://github.com/spicycodez/LUSTIFYMUSIC/blob/main/sample.env)
 - Upgrade and Update by :
 `sudo apt-get update && sudo apt-get upgrade -y`
 - Install Ffmpeg by :
@@ -45,7 +45,7 @@
 - Install Node js by :
 `curl -fssL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm`
 - Clone the repository by :
-`git clone https://github.com/BUG-MUSIX/NishaMusic && cd STRANGER-MUSIC`
+`git clone https://github.com/spicycodez/LUSTIFYMUSIC && cd LUSTIFYMUSIC`
 - Install requirements by :
 `pip3 install -U -r requirements.txt`
 - Fill your variables in the env by :
@@ -103,7 +103,7 @@ sudo apt-get install python3-pip -y
 sudo pip3 install -U pip
 curl -fssL
 https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm
-git clone https://github.com/itsLustify/LustifyMusic&& cd LustifyMusic
+git clone https://github.com/spicycodez/LustifyMusic&& cd LustifyMusic
 pip3 install -U -r requirements.txt
 bash setup
 sudo apt install tmux
@@ -192,6 +192,6 @@ Bot also Supported with Channels. Just add bot and assistant to the Channel as A
 
 ### Credits : 
 
-- [ᴧᴧʀᴜᴍɪ](https://github.com/spicycodez)
+- [ꜱᴘɪᴄʏ ᴄᴏᴅᴇʀꜱ](https://github.com/spicycodez)
 - [ᴛᴇʟᴇɢʀᴧᴍ](https://t.me/SheOwnsMaxim)
 - Everyone In This Journey !
