@@ -15,8 +15,8 @@ BOT_TOKEN = getenv("BOT_TOKEN", "")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
 
-API_URL = getenv("API_URL", "https://api.thequickearn.xyz")
-VIDEO_API_URL = getenv("VIDEO_API_URL", "https://api.video.thequickearn.xyz")
+API_URL = getenv("API_URL", "https://tgapi.xbitcode.com") #YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com')
+#VIDEO_API_URL = getenv("VIDEO_API_URL", "https://api.video.thequickearn.xyz")
 API_KEY = getenv("API_KEY", "NxGBNexGenBotse151bd")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 54000))
