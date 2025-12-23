@@ -27,3 +27,4 @@ yt-dlp
 git+https://github.com/yt-dlp/yt-dlp
 git+https://github.com/BillaSpace/youtube-search-python.git
 wget
+yt-search-py
