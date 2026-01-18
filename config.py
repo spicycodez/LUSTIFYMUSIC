@@ -11,12 +11,12 @@ API_ID = int(getenv("API_ID", 24208695))
 
 API_HASH = getenv("API_HASH", "fa96a7eb2dffe7f4cc8ba1399b68d24d")
 
-BOT_TOKEN = getenv("BOT_TOKEN", "")
+BOT_TOKEN = getenv("BOT_TOKEN", "7850675931:AAF9_38a8SUGrQdKlCHuH-hNZqchyZ3Md00")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://LUSTIFYXMUSIC:Abhi77394@lustifymusic.evxnqby.mongodb.net/?retryWrites=true&w=majority&appName=LUSTIFYMUSIC")
 
 YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com') ## xBit Music Endpoint.
-YT_API_KEY = getenv("YT_API_KEY" , None ) ## Your API key like: xbit_10000000xx0233 Get from  https://t.me/tgmusic_apibot
+YT_API_KEY = getenv("YT_API_KEY" , "xbit_xeWyV5k35yCQxeIY9YQC1xKxQchtItjM" ) ## Your API key like: xbit_10000000xx0233 Get from  https://t.me/tgmusic_apibot
 
 #API_URL = getenv("API_URL", "https://tgapi.xbitcode.com") #YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com')
 #VIDEO_API_URL = getenv("VIDEO_API_URL", "https://api.video.thequickearn.xyz")
@@ -28,7 +28,7 @@ SONG_DOWNLOAD_DURATION = int(
     getenv("SONG_DOWNLOAD_DURATION_LIMIT", "54000")
 )
 
-LOGGER_ID = int(getenv("LOGGER_ID", ))
+LOGGER_ID = int(getenv("LOGGER_ID", -1002553338682))
 
 OWNER_ID = int(getenv("OWNER_ID", "7603581459"))
 
@@ -73,7 +73,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 21474836480))
 
 
 # Get your pyrogram v2 session from @Shsusu_bot on Telegram
-STRING1 = getenv("STRING_SESSION", "")
+STRING1 = getenv("STRING_SESSION", "BQFZuDsAlI9PGTSv2KJ1V4LbUe7LBoNvQExsvz_7dpQnbm3Y0Hka65rjndUHb_2gD24FMaYTwiZXUzZDzyjCWMV5q0ADG6ki648XCgWOw52UIgTyRWR-PMrIQh9Um0uIJSP_EPgJ6LGAIUQ1gWMjYnAJqurqoaQqCyv_sGzKxOMGyvl6okB-kK2G5py4J7fpId6aBmYIvfH24UtU9HHz18dx2AkOKmDcffRD3yp2dkSyZW69MUGQc6vck2vlFU-tn9uRKflDAH7fAao9a97v2JLzZNPfqMjXkXUR4EjxY2rsrgwyjEZMcOlOHj04nfK1ZxCFj9P8nZ9EmOdPE_Y8NnBhMWRArAAAAAGMQVi8AA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
