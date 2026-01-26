@@ -15,19 +15,11 @@ from LustifyMusic.utils.formatters import time_to_seconds
 
 logger = LOGGER(__name__)
 
-
 # ==========================
-# COOKIE HANDLING (OPTIONAL)
+# COOKIE HANDLING (DISABLED SAFE)
 # ==========================
 def cookie_txt_file():
-    try:
-        folder_path = f"{os.getcwd()}/cookies"
-        txt_files = glob.glob(os.path.join(folder_path, "*.txt"))
-        if not txt_files:
-            return None
-        return f"cookies/{os.path.basename(random.choice(txt_files))}"
-    except Exception:
-        return None
+    return None
 
 
 # ==========================
@@ -50,16 +42,14 @@ async def direct_ytdlp_download(vid_id: str, is_video: bool = False):
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "quiet": True,
                 "noplaylist": True,
-                "postprocessors": [{
-                    "key": "FFmpegExtractAudio",
-                    "preferredcodec": "mp3",
-                    "preferredquality": "192",
-                }],
+                "postprocessors": [
+                    {
+                        "key": "FFmpegExtractAudio",
+                        "preferredcodec": "mp3",
+                        "preferredquality": "192",
+                    }
+                ],
             }
-
-        cookie = cookie_txt_file()
-        if cookie:
-            ydl_opts["cookiefile"] = cookie
 
         loop = asyncio.get_running_loop()
 
@@ -127,13 +117,12 @@ class YouTubeAPI:
         if offset is None:
             return None
 
-        return text[offset: offset + length]
+        return text[offset : offset + length]
 
     # ==========================
     # DETAILS (SEARCH OR URL)
     # ==========================
     async def details(self, link: str, videoid: Union[bool, str] = None):
-        # If not a YouTube URL, treat as search query
         if not re.search(self.regex, link):
             query = link
         else:
@@ -221,7 +210,6 @@ class YouTubeAPI:
     # ==========================
     async def video(self, link: str, videoid: Union[bool, str] = None):
         if not re.search(self.regex, link):
-            # Search first to get video ID
             results = VideosSearch(link, limit=1)
             data = await results.next()
             for result in data.get("result", []):
@@ -321,10 +309,6 @@ class YouTubeAPI:
         link = link.split("&")[0].split("?si=")[0]
 
         ydl_opts = {"quiet": True}
-        cookie = cookie_txt_file()
-        if cookie:
-            ydl_opts["cookiefile"] = cookie
-
         formats_available = []
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -333,14 +317,16 @@ class YouTubeAPI:
                 try:
                     if "dash" in str(fmt.get("format", "")).lower():
                         continue
-                    formats_available.append({
-                        "format": fmt.get("format"),
-                        "filesize": fmt.get("filesize"),
-                        "format_id": fmt.get("format_id"),
-                        "ext": fmt.get("ext"),
-                        "format_note": fmt.get("format_note"),
-                        "yturl": link,
-                    })
+                    formats_available.append(
+                        {
+                            "format": fmt.get("format"),
+                            "filesize": fmt.get("filesize"),
+                            "format_id": fmt.get("format_id"),
+                            "ext": fmt.get("ext"),
+                            "format_note": fmt.get("format_note"),
+                            "yturl": link,
+                        }
+                    )
                 except Exception:
                     continue
 
@@ -383,7 +369,7 @@ class YouTubeAPI:
                 selected["title"],
                 selected["duration"],
                 selected["thumbnails"][0]["url"].split("?")[0],
-                selected["id"]
+                selected["id"],
             )
 
         except Exception as e:
@@ -408,7 +394,6 @@ class YouTubeAPI:
         if re.search(self.regex, link):
             vid_id = link.split("v=")[-1].split("&")[0].replace("youtu.be/", "")
         else:
-            # Search to get video ID
             results = VideosSearch(link, limit=1)
             data = await results.next()
             for result in data.get("result", []):
