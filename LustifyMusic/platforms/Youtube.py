@@ -1,6 +1,5 @@
 import asyncio
 import glob
-import json
 import os
 import random
 import re
@@ -91,11 +90,17 @@ class YouTubeAPI:
         self.listbase = "https://youtube.com/playlist?list="
         self.reg = re.compile(r"\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])")
 
+    # --------------------------
+    # CHECK IF LINK IS YOUTUBE
+    # --------------------------
     async def exists(self, link: str, videoid: Union[bool, str] = None):
         if videoid:
             link = self.base + link
         return bool(re.search(self.regex, link))
 
+    # --------------------------
+    # EXTRACT URL FROM MESSAGE
+    # --------------------------
     async def url(self, message_1: Message) -> Union[str, None]:
         messages = [message_1]
         if message_1.reply_to_message:
@@ -125,15 +130,18 @@ class YouTubeAPI:
         return text[offset: offset + length]
 
     # ==========================
-    # SEARCH & DETAILS
+    # DETAILS (SEARCH OR URL)
     # ==========================
     async def details(self, link: str, videoid: Union[bool, str] = None):
-        if videoid:
-            link = self.base + link
+        # If not a YouTube URL, treat as search query
+        if not re.search(self.regex, link):
+            query = link
+        else:
+            if videoid:
+                link = self.base + link
+            query = link.split("&")[0].split("?si=")[0]
 
-        link = link.split("&")[0].split("?si=")[0]
-
-        results = VideosSearch(link, limit=1)
+        results = VideosSearch(query, limit=1)
         data = await results.next()
 
         for result in data.get("result", []):
@@ -149,15 +157,20 @@ class YouTubeAPI:
 
             return title, duration_min, duration_sec, thumbnail, vidid
 
-        raise ValueError("No results found")
+        raise ValueError("No results found for this query")
 
+    # ==========================
+    # TITLE
+    # ==========================
     async def title(self, link: str, videoid: Union[bool, str] = None):
-        if videoid:
-            link = self.base + link
+        if not re.search(self.regex, link):
+            query = link
+        else:
+            if videoid:
+                link = self.base + link
+            query = link.split("&")[0].split("?si=")[0]
 
-        link = link.split("&")[0].split("?si=")[0]
-
-        results = VideosSearch(link, limit=1)
+        results = VideosSearch(query, limit=1)
         data = await results.next()
 
         for result in data.get("result", []):
@@ -165,13 +178,18 @@ class YouTubeAPI:
 
         raise ValueError("No title found")
 
+    # ==========================
+    # DURATION
+    # ==========================
     async def duration(self, link: str, videoid: Union[bool, str] = None):
-        if videoid:
-            link = self.base + link
+        if not re.search(self.regex, link):
+            query = link
+        else:
+            if videoid:
+                link = self.base + link
+            query = link.split("&")[0].split("?si=")[0]
 
-        link = link.split("&")[0].split("?si=")[0]
-
-        results = VideosSearch(link, limit=1)
+        results = VideosSearch(query, limit=1)
         data = await results.next()
 
         for result in data.get("result", []):
@@ -179,13 +197,18 @@ class YouTubeAPI:
 
         raise ValueError("No duration found")
 
+    # ==========================
+    # THUMBNAIL
+    # ==========================
     async def thumbnail(self, link: str, videoid: Union[bool, str] = None):
-        if videoid:
-            link = self.base + link
+        if not re.search(self.regex, link):
+            query = link
+        else:
+            if videoid:
+                link = self.base + link
+            query = link.split("&")[0].split("?si=")[0]
 
-        link = link.split("&")[0].split("?si=")[0]
-
-        results = VideosSearch(link, limit=1)
+        results = VideosSearch(query, limit=1)
         data = await results.next()
 
         for result in data.get("result", []):
@@ -194,9 +217,17 @@ class YouTubeAPI:
         raise ValueError("No thumbnail found")
 
     # ==========================
-    # GET STREAM URL (FOR VC)
+    # GET STREAM URL (VC PLAY)
     # ==========================
     async def video(self, link: str, videoid: Union[bool, str] = None):
+        if not re.search(self.regex, link):
+            # Search first to get video ID
+            results = VideosSearch(link, limit=1)
+            data = await results.next()
+            for result in data.get("result", []):
+                link = f"https://youtu.be/{result['id']}"
+                break
+
         if videoid:
             link = self.base + link
 
@@ -223,9 +254,12 @@ class YouTubeAPI:
             return 0, str(e)
 
     # ==========================
-    # PLAYLIST SUPPORT
+    # PLAYLIST
     # ==========================
     async def playlist(self, link, limit, user_id, videoid: Union[bool, str] = None):
+        if not re.search(self.regex, link):
+            raise ValueError("Playlist requires a YouTube URL")
+
         if videoid:
             link = self.listbase + link
 
@@ -252,12 +286,14 @@ class YouTubeAPI:
     # TRACK INFO
     # ==========================
     async def track(self, link: str, videoid: Union[bool, str] = None):
-        if videoid:
-            link = self.base + link
+        if not re.search(self.regex, link):
+            query = link
+        else:
+            if videoid:
+                link = self.base + link
+            query = link.split("&")[0].split("?si=")[0]
 
-        link = link.split("&")[0].split("?si=")[0]
-
-        results = VideosSearch(link, limit=1)
+        results = VideosSearch(query, limit=1)
         data = await results.next()
 
         for result in data.get("result", []):
@@ -270,12 +306,15 @@ class YouTubeAPI:
             }
             return track_details, result["id"]
 
-        raise ValueError("No track found")
+        raise ValueError("No track found for this query")
 
     # ==========================
-    # FORMATS LIST
+    # FORMATS
     # ==========================
     async def formats(self, link: str, videoid: Union[bool, str] = None):
+        if not re.search(self.regex, link):
+            raise ValueError("Formats require a YouTube URL")
+
         if videoid:
             link = self.base + link
 
@@ -311,14 +350,16 @@ class YouTubeAPI:
     # SLIDER SEARCH
     # ==========================
     async def slider(self, link: str, query_type: int, videoid: Union[bool, str] = None):
-        if videoid:
-            link = self.base + link
-
-        link = link.split("&")[0].split("?si=")[0]
+        if not re.search(self.regex, link):
+            query = link
+        else:
+            if videoid:
+                link = self.base + link
+            query = link.split("&")[0].split("?si=")[0]
 
         try:
             results = []
-            search = VideosSearch(link, limit=10)
+            search = VideosSearch(query, limit=10)
             search_results = (await search.next()).get("result", [])
 
             for result in search_results:
@@ -363,11 +404,18 @@ class YouTubeAPI:
         format_id: Union[bool, str] = None,
         title: Union[bool, str] = None,
     ):
-
-        if videoid:
-            vid_id = link
+        # Determine video ID
+        if re.search(self.regex, link):
+            vid_id = link.split("v=")[-1].split("&")[0].replace("youtu.be/", "")
         else:
-            vid_id = link
+            # Search to get video ID
+            results = VideosSearch(link, limit=1)
+            data = await results.next()
+            for result in data.get("result", []):
+                vid_id = result["id"]
+                break
+            else:
+                return None, False
 
         # ===== DIRECT yt-dlp MODE =====
 
