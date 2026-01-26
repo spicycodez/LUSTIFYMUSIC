@@ -1,20 +1,20 @@
+requirements.txt
+
 aiofiles
 aiohttp
+asyncio
 beautifulsoup4
 dnspython
 ffmpeg-python
 gitpython
 hachoir
 heroku3
-
-# IMPORTANT: Compatible httpx version
-httpx==0.27.0
-
+httpx[http2]==0.28.1 
 motor
 numpy
 pillow==11.2.1
 psutil
-py-tgcalls==0.9.7
+py-tgcalls==0.9.7 
 pykeyboard
 pyrofork
 python-dotenv
@@ -23,9 +23,11 @@ requests
 speedtest-cli
 spotipy
 tgcrypto
+python-telegram-bot
 unidecode
-wget
-
-# YouTube / Music Core
 yt-dlp
+git+https://github.com/yt-dlp/yt-dlp
+git+https://github.com/BillaSpace/youtube-search-python.git
+wget
+yt-search-py
 youtube-search-python==1.6.6
