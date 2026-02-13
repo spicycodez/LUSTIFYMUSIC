@@ -1,5 +1,3 @@
-requirements.txt
-
 aiofiles
 aiohttp
 asyncio
