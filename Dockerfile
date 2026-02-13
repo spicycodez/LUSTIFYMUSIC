@@ -1,5 +1,6 @@
 FROM nikolaik/python-nodejs:python3.10-nodejs20
 
+# Install ffmpeg
 RUN curl -L https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz \
     -o ffmpeg.tar.xz && \
     tar -xJf ffmpeg.tar.xz && \
@@ -7,9 +8,12 @@ RUN curl -L https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-stati
     mv ffmpeg-*-static/ffprobe /usr/local/bin/ && \
     rm -rf ffmpeg*
 
-COPY . /app/
-WORKDIR /app/
+WORKDIR /app
+
+COPY requirements.txt .
 
 RUN pip3 install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 CMD ["bash", "start"]
