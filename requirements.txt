@@ -25,7 +25,6 @@ python-telegram-bot
 unidecode
 yt-dlp
 git+https://github.com/yt-dlp/yt-dlp
-git+https://github.com/AshokShau/py-yt-search.git
 wget
 yt-search-py
 youtube-search-python==1.6.6
