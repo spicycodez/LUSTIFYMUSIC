@@ -13,7 +13,7 @@ API_HASH = getenv("API_HASH", "fa96a7eb2dffe7f4cc8ba1399b68d24d")
 
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://LUSTIFYXMUSIC:Abhi77394@lustifymusic.evxnqby.mongodb.net/?retryWrites=true&w=majority&appName=LUSTIFYMUSIC")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Vineet77394:Abhi2005@cluster0.1quemth.mongodb.net/?appName=Cluster0")
 
 YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com') ## xBit Music Endpoint.
 YT_API_KEY = getenv("YT_API_KEY" , "" ) ## Your API key like: xbit_10000000xx0233 Get from  https://t.me/tgmusic_apibot
@@ -28,11 +28,11 @@ SONG_DOWNLOAD_DURATION = int(
     getenv("SONG_DOWNLOAD_DURATION_LIMIT", "54000")
 )
 
-LOGGER_ID = int(getenv("LOGGER_ID", -1002553338682))
+LOGGER_ID = int(getenv("LOGGER_ID", -1003792919759))
 
-OWNER_ID = int(getenv("OWNER_ID", "7603581459"))
+OWNER_ID = int(getenv("OWNER_ID", "924235973"))
 
-BOT_USERNAME = getenv("BOT_USERNAME" , "LustifyMusicBot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "ubabdevbot")
 
 COMMAND_HANDLER = getenv("COMMAND_HANDLER", "! / .").split()
 
