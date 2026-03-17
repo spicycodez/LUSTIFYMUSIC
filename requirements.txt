@@ -1,4 +1,4 @@
-aiofiles
+Weaiofiles
 aiohttp
 asyncio
 beautifulsoup4
@@ -29,3 +29,4 @@ git+https://github.com/BillaSpace/youtube-search-python.git
 wget
 yt-search-py
 youtube-search-python==1.6.6
+git+https://github.com/AshokShau/py-yt-search.git
